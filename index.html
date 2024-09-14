@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <style>
+      * {
+        text-decoration: none;
+        box-sizing: border-box;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+       .container {
+        overflow-y: scroll;
+        width: 90%;
+      }
+      .navbar {
+        padding-right: 15px;
+        padding-left: 15px;
+        padding: 15px;
+      }
+      .navdiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo a {
+        font-size: 35px;
+        font-weight: 600;
+        color: white;
+      }
+
+      li {
+        color: white;
+        display: inline-block;
+      }
+      li a {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 25px;
+      }
+      a:active,
+      a:hover {
+        background: #1b9bff;
+        transition: 5s;
+      }
+      .main1 {
+        background-image: url(./bg1.jpg);
+        height: 600px;
+      }
+      .main2 {
+        display: grid;
+        grid-template-columns: 350px 350px 350px;
+        justify-content: space-around;
+        padding-top: 200px;
+      }
+
+      .downarrow {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        margin-top: -20px;
+      }
+      .two2 {
+        display: grid;
+        justify-content: center;
+        color: white;
+      }
+      .button {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+      }
+      .main3 {
+        display: grid;
+        grid-template-columns: 580px 580px;
+      }
+      .about {
+        position: relative;
+        margin-left: 50px;
+        align-content: space-between;
+        color: chartreuse;
+        padding-top: 80px;
+      }
+      .three2 {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 100px 100px;
+        column-gap: 50px;
+        row-gap: 5px;
+      }
+      .img {
+        float: left;
+      }
+      h3 {
+        float: right;
+      }
+      h4 {
+        float: right;
+      }
+      .three12 {
+        font-size: 23px;
+        width: 700px;
+        text-align: justify;
+        margin-left: 30px;
+      }
+      .three22 {
+        padding-top: 25px;
+        width: 700px;
+        text-align: justify;
+      }
+      .three32 {
+        padding-top: 30px;
+        width: 700px;
+        text-align: justify;
+      }
+      .main4 {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 400px 400px 400px;
+        column-gap: 50px;
+        padding-top: 100px;
+        margin-left: 50px;
+      }
+      .main5 {
+        position: relative;
+        margin-top: 60px;
+        background-image: url("./bg1.jpg");
+        height: 350px;
+        text-align: center;
+      }
+      .four1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 70px;
+        text-align: justify;
+      }
+      img {
+        float: left;
+      }
+      h3 {
+        float: right;
+      }
+      .five1 {
+        padding-top: 60px;
+        color: white;
+      }
+      .buttons {
+        padding-top: 40px;
+      }
+      .main6 {
+        display: grid;
+        justify-content: space-evenly;
+        grid-template-columns: 200px 800px;
+        column-gap: 0px;
+        padding-top: 80px;
+      }
+      .six1 {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+      }
+      .six11 {
+        color: chartreuse;
+      }
+      .six2 {
+        padding-top: 60px;
+        display: grid;
+        grid-template-columns: 250px 250px 250px;
+        grid-template-rows: 300px 300px;
+        column-gap: 25px;
+        row-gap: 25px;
+      }
+      .six {
+        background-color: aqua;
+      }
+      .main7 {
+        margin-top: 80px;
+        background-image: url("./bg2.jpg");
+        height: 700px;
+      }
+      .seven1 {
+        padding-top: 30px;
+        display: grid;
+        justify-items: center;
+        color: white;
+      }
+      .seven2 {
+        display: grid;
+        padding-top: 50px;
+        justify-content: space-evenly;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 300px 100px;
+        row-gap: 60px;
+        color: white;
+      }
+      .dots {
+        display: grid;
+        justify-content: center;
+        font-size: 60px;
+        color: white;
+      }
+      .main8 {
+        display: grid;
+        justify-content: space-evenly;
+        grid-template-columns: 200px 800px;
+        column-gap: 0px;
+        padding-top: 80px;
+      }
+      .eight1 {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+      }
+      .eight12 {
+        display: grid;
+        grid-template-columns: 50px 250px;
+        grid-template-rows: 50px 50px 50px;
+        column-gap: 25px;
+        row-gap: 25px;
+      }
+      .eight31 {
+        background-image: url("./dotted-map-bg.png");
+        width: 800px;
+        padding-top: 60px;
+      }
+      .form {
+        display: flex;
+        column-gap: 20px;
+      }
+      .main9 {
+        display: grid;
+        margin-top: 80px;
+        background-image: url("./bg3.jpg");
+        height: 150px;
+        width: 100%;
+        color: white;
+        justify-content: space-evenly;
+      }
+      .nine {
+        display:grid;
+        grid-template-columns: 400px 400px;
+        justify-content: space-evenly;
+        column-gap: 500px;
+        margin-left: 50px;
+      }
+      @media screen and (max-width: 550px) {
+        /* container {
+          background-color: black;
+        } */
+
+        ul{
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="main">
+        <div class="main1">
+          <nav class="navbar">
+            <div class="navdiv">
+              <div class="logo"><a href="#">.BREEZE</a></div>
+              <ul>
+                <li><a href="#HOME" class="active">HOME</a></li>
+                <li><a href="#ABOUT" class="active">ABOUT</a></li>
+                <li><a href="#PROJECTS" class="active">PROJECTS</a></li>
+                <li><a href="#TEAM" class="active">TEAM</a></li>
+                <li><a href="#CONTACTUS" class="active">CONTACT US</a></li>
+                <li><img src="./search.png" height="30px" width="30px" /></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="main2" id="#HOME">
+            <div class="two1"><img src="./prev.png" /></div>
+            <div class="two2">
+              <h2 style="width: 400px; margin-left: 70px">
+                INTEGRATED MARKETING
+              </h2>
+              <h1 style="word-spacing: 5px; letter-spacing: 3px; width: 400px; margin-left: 35px;">
+                Best Digital Marketing
+              </h1>
+              <div class="button">
+                <input
+                  type="submit"
+                  value="READ MORE"
+                  style="
+                    background: none;
+                    height: 40px;
+                    width: 110px;
+                    border-radius: 20px;
+                    color: white;
+                    border-color: black;
+                    margin-right: 20px;
+                  "
+                />
+                <input
+                  type="submit"
+                  value="TAKE ACTION"
+                  style="
+                    background: white;
+                    height: 40px;
+                    width: 110px;
+                    border-radius: 20px;
+                    color: chartreuse;
+                  "
+                />
+              </div>
+            </div>
+            <div class="two3" style="margin-left: 300px">
+              <img src="./next.png" />
+            </div>
+          </div>
+        </div>
+        <div class="downarrow"><img src="./downarrow.png" height="40px" /></div>
+      </div>
+      <div class="about" id="ABOUT">ABOUT US</div>
+      <div class="main3" style="margin-left: 50px">
+        <div class="three1" style="width: 450px">
+          <h1>We work with top brands and startups</h1>
+          <div class="three2">
+            <div class="image">
+              <img
+                src="./rocket-removebg-preview (1).png"
+                height="50px"
+                width="50px"
+              />
+              <h3 style="margin-top: 15px">TOP NOTCH</h3>
+            </div>
+            <div>
+              <img
+                src="./rocket-removebg-preview (1).png"
+                height="50px"
+                width="50px"
+              />
+              <h3 style="margin-top: 15px">TOP NOTCH</h3>
+            </div>
+            <div class="image">
+              <img src="./reliable.png" height="50px" width="50px" />
+              <h3 style="margin-top: 15px">RELIABLE</h3>
+            </div>
+            <div>
+              <img src="./reliable.png" height="50px" width="50px" />
+              <h3 style="margin-top: 15px">UP-TO-DATE</h3>
+            </div>
+            <button
+              style="
+                background-color: forestgreen;
+                height: 40px;
+                width: 150px;
+                border-radius: 20px;
+                color: white;
+              "
+            >
+              LEARN MORE<ion-icon name="arrow-forward" width="50px"></ion-icon>
+            </button>
+          </div>
+        </div>
+        <div class="three12">
+          <span style="color: #1b9bff">Breezed HTML Templates</span> is provided
+          by TemplateMo for absolutely free of charge. You can download, edit
+          and use this for your non-commercial and commercial websites.
+          <div class="three22">
+            Redistributing this template as a downlodable ZIP file on any
+            template collection websitet is strictly pohibited. You will need to
+            talk to us if you want to redistribute this template. Thankyou.
+            <div class="three32">
+              This is a Bootstrap V4.3.1 CSS Layout. Do you like it? You can
+              feel free to <span style="color: #1b9bff">talk to us</span>if you
+              have anything.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main4">
+        <div class="image">
+          <img src="./features-icon-1 (1).png" height="50px" width="50px" />
+          <div class="four1">
+            <h3>TOP NOTCH</h3>
+            <p style="width: 320px; padding-top: 20px; font-size: 20px">
+              Proin euismod sem yt diam ultricies. ut faucibus velit ultricies.
+              Nam eu turpis quam Duis ac condimentum eros.
+            </p>
+            <h4 style="padding-top: 20px">
+              LEARN MORE<ion-icon name="arrow-forward" width="50px"></ion-icon>
+            </h4>
+          </div>
+        </div>
+        <div class="image">
+          <img src="./features-icon-1 (1).png" height="50px" width="50px" />
+          <div class="four1">
+            <h3>TOP NOTCH</h3>
+            <p style="width: 320px; padding-top: 20px; font-size: 20px">
+              Proin euismod sem yt diam ultricies. ut faucibus velit ultricies.
+              Nam eu turpis quam Duis ac condimentum eros.
+            </p>
+            <h4 style="padding-top: 20px">
+              LEARN MORE<ion-icon name="arrow-forward" width="50px"></ion-icon>
+            </h4>
+          </div>
+        </div>
+        <div class="image">
+          <img src="./features-icon-1 (1).png" height="50px" width="50px" />
+          <div class="four1">
+            <h3>TOP NOTCH</h3>
+            <p style="width: 320px; padding-top: 20px; font-size: 20px">
+              Proin euismod sem yt diam ultricies. ut faucibus velit ultricies.
+              Nam eu turpis quam Duis ac condimentum eros.
+            </p>
+            <h4 style="padding-top: 20px">
+              LEARN MORE<ion-icon name="arrow-forward" width="50px"></ion-icon>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="main5">
+        <div class="five1">
+          <p style="font-size: 16px">SUBSCRIBE NEWSLETTERS</p>
+          <h1 style="padding-top: 15px">Don't miss this chance!</h1>
+          <p
+            style="
+              width: 850px;
+              margin-left: 270px;
+              font-size: 20px;
+              padding-top: 15px;
+            "
+          >
+            Vivamus suscipit blandit nibh, In cursus mi. Proin vel blandi metus,
+            et auctor elit. Vivamus tincidunt tristique convallis. Ut nec odio
+            vel arcu euismod semper nec ac sem.
+          </p>
+          <div class="buttons">
+            <input
+              type="text"
+              placeholder="   Enter Your Email..."
+              style="
+                height: 40px;
+                width: 500px;
+                border-radius: 20px;
+                color: white;
+                border-color: azure;
+                font-size: 17px;
+              "
+            />
+            <input
+              type="submit"
+              value="SUBSCRIBE NOW"
+              style="
+                background: white;
+                height: 40px;
+                width: 150px;
+                border-radius: 20px;
+                color: chartreuse;
+              "
+            />
+          </div>
+        </div>
+      </div>
+      <div class="main6" id="PROJECTS">
+        <div class="six1">
+          <div class="six11" style="font-size: 20px"><b>OUR PROJECTS</b></div>
+          <div
+            class="six22"
+            style="width: 200px; font-size: 30px; word-spacing: 1px"
+          >
+            <b>Some of our latest projects</b>
+          </div>
+          <div class="six23" style="color: chartreuse">ALL</div>
+          <div class="six24">WEB DESIGN</div>
+          <div class="six25">WEB DEVELOPMENT</div>
+          <div class="six26">GRAPHICS</div>
+          <div class="six27">ART WORKS</div>
+        </div>
+        <div class="six2">
+          <div class="six one"><img src="./img1.jpg" /></div>
+          <div class="six two"><img src="./img2.jpg" /></div>
+          <div class="six three"><img src="./img3.jpg" /></div>
+          <div class="six four"><img src="./img4.jpg" /></div>
+          <div class="six five"><img src="./img5.jpg" /></div>
+          <div class="six six"><img src="./img6.jpg" /></div>
+        </div>
+      </div>
+      <div class="main7" id="TEAM">
+        <div class="seven1">
+          <b style="font-size: 25px">DIGITAL TEAM</b>
+          <b style="font-size: 30px">young and talented members</b>
+        </div>
+        <div class="seven2">
+          <div class="seven one"><img src="./img7.jpg" /></div>
+          <div class="seven two"><img src="./img8.jpg" /></div>
+          <div class="seven three"><img src="./img9.jpg" /></div>
+          <div
+            class="seven four"
+            style="width: 150px; margin-left: 70px; padding-top: 15px"
+          >
+            <b
+              style="
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                  sans-serif;
+                word-spacing: 2px;
+              "
+              >O7 OLIVA SOFIE</b
+            >
+            WEBSITE ANALYST
+          </div>
+          <div
+            class="seven five"
+            style="width: 170px; margin-left: 70px; padding-top: 15px"
+          >
+            <b
+              style="
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                  sans-serif;
+                word-spacing: 2px;
+              "
+              >.01 WHITE CHEESE</b
+            >
+            DIGITAL MARKETING
+          </div>
+          <div
+            class="seven five"
+            style="width: 140px; margin-left: 70px; padding-top: 15px"
+          >
+            <b
+              style="
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                  sans-serif;
+                word-spacing: 2px;
+              "
+              >.02 SNOW MARY</b
+            >
+            SITE ANALYST
+          </div>
+        </div>
+        <div class="dots"><b>...</b></div>
+      </div>
+      <div class="main8" id="CONTACTUS">
+        <div class="eight1">
+          <div class="eight one" style="font-size: 20px; color: chartreuse">
+            <b>CONTACT US</b>
+          </div>
+          <div
+            class="eight two"
+            style="width: 300px; font-size: 30px; word-spacing: 1px"
+          >
+            <b>Fee free to keep in touch with us!</b>
+          </div>
+          <div class="eight12">
+            <div class="eight21"><img src="./contact-info-01.png" /></div>
+            <div class="eight22" style="margin-top: 15px; font-size: 20px">
+              <b>010-020-0860</b>
+            </div>
+            <div class="eight21"><img src="./contact-info-02.png" /></div>
+            <div class="eight22" style="margin-top: 15px; font-size: 20px">
+              <b>info@company.com</b>
+            </div>
+            <div class="eight21"><img src="./contact-info-03 (1).png" /></div>
+            <div class="eight22" style="margin-top: 15px; font-size: 20px">
+              <b>www.company.com</b>
+            </div>
+          </div>
+        </div>
+        <div class="eight31">
+          <section id="contacts" class="box">
+            <div class="form">
+              <input
+                type="text"
+                placeholder="Your Name"
+                style="width: 50%; padding: 20px; margin: 10px 0"
+              />
+              <input
+                type="text"
+                placeholder="Your Phone"
+                style="width: 50%; padding: 20px; margin: 10px 0"
+              />
+            </div>
+            <div class="form">
+              <input
+                type="text"
+                placeholder="Your Email"
+                style="width: 50%; padding: 20px; margin: 10px 0"
+              />
+              <input
+                type="text"
+                placeholder="Subject"
+                style="width: 50%; padding: 20px; margin: 10px 0"
+              />
+            </div>
+            <input
+              type="message"
+              rows="4"
+              style="width: 100%; height: 105px; margin: 10px 0"
+              placeholder=" Message"
+            />
+            <button
+              style="
+                background-color: forestgreen;
+                height: 40px;
+                width: 200px;
+                border-radius: 20px;
+                color: white;
+              "
+            >
+              SEND MESSAGE NOW<ion-icon
+                name="arrow-forward"
+                width="50px"
+              ></ion-icon>
+            </button>
+          </section>
+        </div>
+      </div>
+      <div class="main9">
+        <div class="nine" style="padding-top: 70px">
+          <div class="nine1">
+            Copyright &copy; 2020 Breezed Co., Ltd -Design: TemplateMo
+          </div>
+          <div class="nine2" style="display: flex; margin-left: 110px;">
+            <p>FOLLOW US</p>
+            <img
+              src="./facebook.png"
+              height="30px;"
+              style="margin-top: -8px; margin-left: 20px"
+            />
+            <img src="./twitter.png" height="30px" style="margin-top: -8px" />
+            <img src="./linkedin.png" height="30px" style="margin-top: -8px" />
+            <img src="./chatgpt.png" height="30px" style="margin-top: -8px" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
